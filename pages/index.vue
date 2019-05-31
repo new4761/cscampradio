@@ -1,16 +1,14 @@
 <template>
 
-<el-row>
-  <el-col :span="4" v-for="(run,i)  in info" :key="i"><div class="grid-content bg-purple">  <el-col :span="4"><div class="grid-content bg-purple-light"><el-card class="box-card">
-  <div slot="header" class="clearfix">
-    <span>{{ run[0]  }}</span>
-    <el-button style="float: right; padding: 3px 0" type="text">Operation button</el-button>
+<el-row style="font-family: 'Sarabun', sans-serif;">
+  <el-col :span="4" v-for="(run,i)  in info" :key="i" ><div class="grid-content bg-purple">  <el-col :span="4"><div class="grid-content bg-purple-light"><el-card class="box-card" >
+  <div slot="header" class="clearfix radius-2">
+    <span  style="text-align: center; font-size:3em;">กลุ่มที่ : {{run[0]}}</span>
   </div>
-  <div v-for="o in 6" :key="o" class="text item">
+  <div v-for="o in 6" :key="o" class="text item" style=" background:#fffffF;">
       <p
-        v-if="o==6">คะเเนนรวม =>{{run[o]}}</p>
-    <p    v-else>กิจกรรมที่ {{o}} =>{{run[o]}}</p>
-    
+        v-if="o==6" style="text-align: center; font-size:3em;">{{run[o]}}</p>
+    <p    v-else>กิจกรรมที่ {{o}} =>{{run[o]}}</p>   
   </div>
 </el-card></div></el-col></div></el-col>
 
@@ -37,13 +35,13 @@ info: null
 </script>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
 .links {
   padding-top: 15px;
 }
 
   .text {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .item {
@@ -60,7 +58,7 @@ info: null
   }
 
   .box-card {
-    width: 480px;
+    width: 350px;
   }
     .el-row {
     margin-bottom: 20px;
@@ -69,7 +67,7 @@ info: null
     border-radius: 4px;
   }
   .bg-purple-dark {
-    background: #99a9bf;
+    background:   #99a9bf;
   }
   .bg-purple {
     background: #d3dce6;
